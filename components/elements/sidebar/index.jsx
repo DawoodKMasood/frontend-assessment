@@ -26,16 +26,19 @@ const Sidebar = (props) => {
     return (
         <motion.aside
         animate={visibility ? "open" : "closed"}
-        className="w-[300px] bg-slate-50 border-l"
+        className="bg-slate-50 border-l"
         variants={variants}
+        initial={{
+            width: 0
+        }}
         >
             <div className="mx-6 my-10">
                 <div className="flex flex-col gap-6">
                     <div className="flex justify-between items-center">
                         <Title title="Add Topic" />
-                        <Button onClick={() => toggleVisibility()}>
-                            <Cross className="w-4 h-4" />
-                        </Button>
+                        <div className="hover:cursor-pointer" onClick={() => toggleVisibility()}>
+                            <Cross classes="w-4 h-4" />
+                        </div>
                     </div>
                     { children }
                 </div>

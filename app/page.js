@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { selectedCategoryAtom } from "@/recoil/atom/selectedCategoryAtom";
 import { categoriesAtom } from "@/recoil/atom/categoriesAtom";
-import { topicsAtom } from "@/recoil/atom/topicsAtom"
+import { topicsAtom } from "@/recoil/atom/topicsAtom";
 
 import Title from "@/components/elements/title"
 import Topics from "@/components/topics"
@@ -12,9 +12,10 @@ import Categories from "@/components/categories";
 import AddTopic from "@/components/add-topic";
 import Button from "@/components/elements/button";
 import Sidebar from "@/components/elements/sidebar";
+import ChevronRight from "@/components/icons/chevron-right";
 
 export default function Home() {
-  const [sidebarVisibility, setSidebarVisibility] = useState(true);
+  const [sidebarVisibility, setSidebarVisibility] = useState(false);
   const [categories, _setCategories ] = useRecoilState(categoriesAtom);
   const [selectedCategory, _setSelectedCategory ] = useRecoilState(selectedCategoryAtom);
   const [topics, _setTopics] = useRecoilState(topicsAtom);
@@ -30,9 +31,9 @@ export default function Home() {
         <Title title="Categories" size="large" />
         <div className="flex items-center justify-between">
           <Categories categories={categories} />
-          <div>
+          <div className="flex gap-2 justify-center items-center">
             <Button type="primary" onClick={() => toggleSidebar()}>
-              Add Topic
+              Add Topic <ChevronRight classes="w-3 h-3" />
             </Button>
           </div>
         </div>
