@@ -39,7 +39,7 @@ export default function Home() {
         </div>
         <Topics topics={filteredTopics} />
       </div>
-      <Sidebar visibility={sidebarVisibility} setVisibility={setSidebarVisibility}>
+      <Sidebar visibility={sidebarVisibility} setVisibility={setSidebarVisibility} title="Add Topic">
         <AddTopic />
       </Sidebar>
     </main>

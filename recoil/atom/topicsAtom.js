@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import { atom } from "recoil";
 
 export const topicsAtom = atom({
@@ -5,8 +6,9 @@ export const topicsAtom = atom({
   default: [
     {
         categoryId: 1,
-        id: 0,
+        id: uuidv4(),
         title: "The Importance of Establishing a strong Online Presence for Small Bussinesses",
+        content: "",
         labels: [
             {
                 colour: "#008000",
@@ -17,8 +19,9 @@ export const topicsAtom = atom({
     },
     {
       categoryId: 2,
-      id: 1,
+      id: uuidv4(),
       title: "Best Practices for SEO",
+      content: "",
       labels: [
           {
               colour: "#aaa000",

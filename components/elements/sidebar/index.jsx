@@ -17,7 +17,7 @@ const variants = {
 
 const Sidebar = (props) => {
 
-    const {visibility, setVisibility, children} = props;
+    const {visibility, setVisibility, hideX, title, children} = props;
 
     const toggleVisibility = () => {
         setVisibility(!visibility)
@@ -29,16 +29,18 @@ const Sidebar = (props) => {
         className="bg-slate-50 border-l"
         variants={variants}
         initial={{
-            width: 0
+            width: visibility ? 300 : 0
         }}
         >
             <div className="mx-6 my-10">
                 <div className="flex flex-col gap-6">
                     <div className="flex justify-between items-center">
-                        <Title title="Add Topic" />
-                        <div className="hover:cursor-pointer" onClick={() => toggleVisibility()}>
-                            <Cross classes="w-4 h-4" />
-                        </div>
+                        <Title title={title} />
+                        {!hideX && (
+                            <div className="hover:cursor-pointer" onClick={() => toggleVisibility()}>
+                                <Cross classes="w-4 h-4" />
+                            </div>
+                        )}
                     </div>
                     { children }
                 </div>

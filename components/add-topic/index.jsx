@@ -48,6 +48,7 @@ const AddTopic = (props) => {
             categoryId: 1,
             id: uuidv4(),
             title: topicTitle,
+            content: "",
             labels: labels,
         };
       

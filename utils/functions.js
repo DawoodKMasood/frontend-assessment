@@ -7,6 +7,16 @@ const generateRandomColor = () => {
     return color;
 };
 
+const isString = (o) => {
+  return typeof o == "string" || (typeof o == "object" && o.constructor === String);
+}
+
+const isNumber = (o) => {
+  return typeof o == "number" || (typeof o == "object" && o.constructor === Number);
+}
+
 export {
-    generateRandomColor
+    generateRandomColor,
+    isString,
+    isNumber,
 }

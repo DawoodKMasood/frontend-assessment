@@ -1,16 +1,12 @@
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import '../../globals.css'
 
 export const metadata = {
-  title: 'Editor',
+  title: 'Editing',
   description: '',
 }
 
-export default function RootLayout({ children }) {
+export default function EditorLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <div suppressHydrationWarning={true}>{children}</div>
   )
 }
