@@ -1,21 +1,22 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useRecoilState } from "recoil";
+
 import { topicsAtom } from "@/recoil/atom/topicsAtom";
 
-import Button from "../elements/button";
-import Input from "../elements/input";
-import Label from "../elements/label";
+import Button from "../button";
+import Input from "../input";
+import Label from "../label";
 
 import { generateRandomColor } from "@/utils/functions";
 
-const AddTopic = (props) => {
+const AddTopic = () => {
 
     const [labelInput, setLabelInput] = useState("");
     const [labels, setLabels] = useState([]);
     const [topicTitle, setTopicTitle] = useState("");
 
-    const [topics, setTopics] = useRecoilState(topicsAtom);
+    const [_topics, setTopics] = useRecoilState(topicsAtom);
 
     const onTitleChange = (e) => {
         const { value } = e.target;

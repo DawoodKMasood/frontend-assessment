@@ -9,7 +9,7 @@ import { topicsAtom } from "@/recoil/atom/topicsAtom";
 import Title from "@/components/elements/title"
 import Topics from "@/components/topics"
 import Categories from "@/components/categories";
-import AddTopic from "@/components/add-topic";
+import AddTopic from "@/components/elements/add-topic";
 import Button from "@/components/elements/button";
 import Sidebar from "@/components/elements/sidebar";
 import ChevronRight from "@/components/icons/chevron-right";

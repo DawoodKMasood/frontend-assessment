@@ -13,6 +13,7 @@ import { isNumber, isString } from '@/utils/functions';
 import Sidebar from "@/components/elements/sidebar";
 import ChevronLeft from "@/components/icons/chevron-left";
 import Button from "@/components/elements/button";
+import EditorOperations from '@/components/elements/editor-operations';
 
 const Page = ({ params }) => {
 
@@ -48,7 +49,7 @@ const Page = ({ params }) => {
           <Button classes="max-w-fit" type="secondary" onClick={(e) => handleLinkClick(e)}>
             <ChevronLeft classes="w-4 h-4" /> Go Back
           </Button>
-          <input className="text-lg focus:outline-none focus:ring-0" value={editorTitle} onChange={(e) => onEditorTitleChange(e)} />
+          <input className="text-lg focus:outline-none focus:ring-0" value={editorTitle} onChange={(e) => onEditorTitleChange(e)} placeholder='Enter a Title' />
         </div>
         <ReactQuill 
         modules={
@@ -68,7 +69,7 @@ const Page = ({ params }) => {
         />
       </div>
       <Sidebar visibility={sidebarVisibility} setVisibility={setSidebarVisibility} hideX={true} title="Operations">
-        
+        <EditorOperations setEditorValue={setEditorValue} />
       </Sidebar>
     </div>
   )

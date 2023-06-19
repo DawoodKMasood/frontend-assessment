@@ -1,32 +1,28 @@
+import { v4 as uuidv4 } from "uuid";
 import { atom } from "recoil";
 
 export const categoriesAtom = atom({
   key: "categoriesState",
   default: [
     {
-        id: 0,
+        id: uuidv4(),
         title: "All",
-        value: "all"
     },
     {
-      id: 1,
+      id: uuidv4(),
       title: "Custom",
-      value: "custom"
     },
     {
-      id: 2,
+      id: uuidv4(),
       title: "ICP",
-      value: "icp"
     },
     {
-      id: 3,
+      id: uuidv4(),
       title: "Mission",
-      value: "mission"
     },
     {
-      id: 4,
+      id: uuidv4(),
       title: "Product",
-      value: "product"
     },
   ],
 });
