@@ -1,12 +1,20 @@
 const Title = (props) => {
-
-    const { classes, size, title } = props;
-
+    const { size, title } = props;
+  
+    let fontSize = "";
+    if (size === "large") {
+      fontSize = "text-xl";
+    } else if (size === "medium") {
+      fontSize = "text-base";
+    } else if (size === "small") {
+      fontSize = "text-sm";
+    }
+  
     return (
-        <span className={`${size === 'large' && 'text-xl' || size === 'medium' && 'text-base' || size === 'small' && 'text-sm'} text-slate-700 font-semibold`}>
-            {title || 'No Title Assigned!'}
-        </span>
-    )
-}
-
-export default Title;
+      <span className={`text-slate-700 font-semibold ${fontSize}`}>
+        {title || "No Title Assigned!"}
+      </span>
+    );
+  };
+  
+  export default Title;

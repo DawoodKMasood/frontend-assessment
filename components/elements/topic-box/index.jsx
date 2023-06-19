@@ -27,8 +27,8 @@ const TopicBox = (props) => {
 
     return (
         <div className="px-4 py-4 hover:bg-slate-50 transition-all">
-            <div className="flex justify-between items-center">
-                <div className="flex flex-col gap-1 flex-1">
+            <div className="flex flex-col md:flex-row gap-y-2 justify-between items-start md:items-center">
+                <div className="flex flex-col gap-x-1 gap-y-1 flex-1">
                     <div>
                         <Title size="medium" title={title} />
                     </div>
@@ -42,7 +42,7 @@ const TopicBox = (props) => {
                         )}
                     </div>
                 </div>
-                <div className="flex gap-2 justify-center items-center">
+                <div className="flex gap-2 justify-start md:justify-center items-center">
                     <Button type="primary" onClick={(e) => handleLinkClick(e)}>
                         <Pen classes="w-3 h-3" /> Write
                     </Button>

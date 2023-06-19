@@ -29,6 +29,19 @@ export const topicsAtom = atom({
               title: "seo",
           }
       ]
-  },
+    },
+    {
+        categoryId: 2,
+        id: uuidv4(),
+        title: "How Fast Turnaround Times in Logo and Website Design Benefit your Business",
+        content: "",
+        labels: [
+            {
+                colour: "#c00000",
+                id: 0,
+                title: "website design",
+            }
+        ]
+    }
   ],
 });

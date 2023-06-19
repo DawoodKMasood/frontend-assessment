@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWind } from '@fortawesome/free-solid-svg-icons'
 
 const WindTurbine = (props) => {
-
     const { classes } = props;
 
     return (

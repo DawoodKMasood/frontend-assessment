@@ -1,4 +1,5 @@
 'use client'
+
 import { useRecoilState } from "recoil";
 import { useState } from "react";
 
@@ -14,25 +15,25 @@ import Button from "@/components/elements/button";
 import Sidebar from "@/components/elements/sidebar";
 import ChevronRight from "@/components/icons/chevron-right";
 
-export default function Home() {
+const Home = () => {
   const [sidebarVisibility, setSidebarVisibility] = useState(false);
-  const [categories, _setCategories ] = useRecoilState(categoriesAtom);
-  const [selectedCategory, _setSelectedCategory ] = useRecoilState(selectedCategoryAtom);
-  const [topics, _setTopics] = useRecoilState(topicsAtom);
-  const filteredTopics = selectedCategory !== 0 ? topics.filter(topic => topic.categoryId === selectedCategory) : topics;
+  const [categories] = useRecoilState(categoriesAtom);
+  const [selectedCategory] = useRecoilState(selectedCategoryAtom);
+  const [topics] = useRecoilState(topicsAtom);
+  const filteredTopics = selectedCategory ? topics.filter(topic => topic.categoryId === selectedCategory) : topics;
 
   const toggleSidebar = () => {
-    setSidebarVisibility(!sidebarVisibility)
-  }
+    setSidebarVisibility(prevVisibility => !prevVisibility);
+  };
 
   return (
-    <main className="flex gap-4">
+    <main className="flex flex-col md:flex-row gap-4">
       <div className="flex flex-col gap-6 flex-1 mx-6 my-10 h-screen">
         <Title title="Categories" size="large" />
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row gap-x-2 gap-y-4 items-start md:items-center justify-between">
           <Categories categories={categories} />
           <div className="flex gap-2 justify-center items-center">
-            <Button type="primary" onClick={() => toggleSidebar()}>
+            <Button type="primary" onClick={toggleSidebar}>
               Add Topic <ChevronRight classes="w-3 h-3" />
             </Button>
           </div>
@@ -45,3 +46,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home;
