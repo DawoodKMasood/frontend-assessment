@@ -6,7 +6,7 @@ export const topicsAtom = atom({
     {
         categoryId: 1,
         id: 0,
-        title: "How to kill a bird!",
+        title: "The Importance of Establishing a strong Online Presence for Small Bussinesses",
         labels: [
             {
                 colour: "#008000",
@@ -18,7 +18,7 @@ export const topicsAtom = atom({
     {
       categoryId: 2,
       id: 1,
-      title: "Best practices for SEO?",
+      title: "Best Practices for SEO",
       labels: [
           {
               colour: "#aaa000",

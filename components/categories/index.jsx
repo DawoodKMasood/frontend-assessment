@@ -1,6 +1,6 @@
 import CategoryTab from "../elements/category-tab";
 
-const CategoriesSelection = (props) => {
+const Categories = (props) => {
 
     const { categories } = props;
 
@@ -13,4 +13,4 @@ const CategoriesSelection = (props) => {
     )
 }
 
-export default CategoriesSelection;
+export default Categories;
