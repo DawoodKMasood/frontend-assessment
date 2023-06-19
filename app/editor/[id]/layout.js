@@ -1,8 +1,8 @@
 import '../../globals.css'
 
 export const metadata = {
-  title: 'Editing',
-  description: '',
+  title: 'Editor Example',
+  description: 'This is just an example of editor!',
 }
 
 export default function EditorLayout({ children }) {
