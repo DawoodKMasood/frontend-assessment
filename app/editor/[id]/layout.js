@@ -7,6 +7,8 @@ export const metadata = {
 
 export default function EditorLayout({ children }) {
   return (
-    <div suppressHydrationWarning={true}>{children}</div>
+    <div suppressHydrationWarning={true}>
+      {children}
+    </div>
   )
 }
