@@ -2,4 +2,4 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Demo
 
-Vercel: https://frontend-assessment-2k1hu8xpk-dawoodkmasood.vercel.app
+Vercel: [https://frontend-assessment-2k1hu8xpk-dawoodkmasood.vercel.app](https://frontend-assessment-smoky.vercel.app/)https://frontend-assessment-smoky.vercel.app/
